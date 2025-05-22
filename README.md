@@ -174,3 +174,7 @@ DELETE /api/videos/{id}
    - Dockerizar la aplicación
    - Configurar para entornos de producción
 
+## Estudiante:
+   - Javier Jose Gaviria Morales
+   - Ingenieria de Sistemas
+
