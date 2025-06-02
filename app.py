@@ -4,6 +4,7 @@ Archivo principal de la aplicación Flask
 import os
 from flask import Flask
 from flask_restful import Api
+from flasgger import Swagger
 from models import db
 from resources.video import Video
 from config import config
@@ -18,8 +19,10 @@ def create_app(config_name='default'):
     Returns:
         Flask: Aplicación Flask configurada
     """
+
     # TODO: Crear el objeto 'app'
     app = Flask(__name__)
+
     
     # Cargar configuración
     app.config.from_object(config[config_name])
@@ -27,6 +30,7 @@ def create_app(config_name='default'):
     # Inicializar extensiones
     db.init_app(app)
     api = Api(app)
+    swagger = Swagger(app)
     
     # Registrar rutas
     api.add_resource(Video, "/api/videos/<int:video_id>")
@@ -46,4 +50,3 @@ if __name__ == "__main__":
     
     # Ejecutar servidor
     app.run(host='0.0.0.0', port=5000)
-
