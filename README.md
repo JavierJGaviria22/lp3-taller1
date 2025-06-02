@@ -178,3 +178,7 @@ DELETE /api/videos/{id}
    - Javier Jose Gaviria Morales
    - Ingenieria de Sistemas
 
+## Mejora sugerida implementada:
+   - Se crea documentacion en Swagger, es necesario aplicar: pip install flasgger.
+   - Luego de ejecutar la app, ir a: http://127.0.0.1:5000/apidocs/
+
